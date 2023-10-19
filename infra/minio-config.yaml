@@ -9,7 +9,7 @@ persistence:
   size: 1Gi
 
 ingress:
-  enabled: true
+  enabled: false
   ingressClassName: "nginx"
   hostname: openim2.nsddd.top #hostname for minioconsole
   path: /
@@ -22,11 +22,15 @@ ingress:
 apiIngress:
   enabled: true
   ingressClassName: "nginx"
-  hostname: openim3.nsddd.top #hostname for minioapi
-  path: /
+  hostname: openim1.nsddd.top #hostname for minioapi
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: 50m
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+  path: /im-minio-api(/|$)(.*)
   pathType: ImplementationSpecific
   servicePort: minio-api
   extraTls:
     - hosts:
-        - openim3.nsddd.top
-      secretName: openim3tls
+        - openim1.nsddd.top
+      secretName: webapitls
