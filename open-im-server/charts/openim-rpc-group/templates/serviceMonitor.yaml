@@ -10,5 +10,5 @@ spec:
     - interval: 15s
       port: metrics-port
   selector:
-    {{- include "openim-rpc-group.selectorLabels" . | nindent 4 }}
+    app.kubernetes.io/name: openim-rpc-group
 {{- end }}

@@ -10,5 +10,5 @@ spec:
     - interval: 15s
       port: metrics-port
   selector:
-    {{- include "openim-msgtransfer.selectorLabels" . | nindent 4 }}
+    app.kubernetes.io/name: openim-msgtransfer
 {{- end }}
