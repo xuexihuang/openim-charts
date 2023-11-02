@@ -10,5 +10,6 @@ spec:
     - interval: 15s
       port: metrics-port
   selector:
-    app.kubernetes.io/name: openim-rpc-third
+    matchLabels:
+      app.kubernetes.io/name: openim-rpc-third
 {{- end }}
