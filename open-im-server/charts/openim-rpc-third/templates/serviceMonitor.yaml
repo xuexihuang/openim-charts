@@ -1,0 +1,14 @@
+{{- if .Values.monitor.enabled }}
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  labels:
+    release: kube-prometheus-stack
+  name: {{ include "openim-rpc-third.fullname" . }}
+spec:
+  endpoints:
+    - interval: 15s
+      port: metrics-port
+  selector:
+    {{- include "openim-rpc-third.selectorLabels" . | nindent 4 }}
+{{- end }}

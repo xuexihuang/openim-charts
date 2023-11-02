@@ -1,0 +1,14 @@
+{{- if .Values.monitor.enabled }}
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  labels:
+    release: kube-prometheus-stack
+  name: {{ include "openim-msggateway.fullname" . }}
+spec:
+  endpoints:
+    - interval: 15s
+      port: metrics-port
+  selector:
+    {{- include "openim-msggateway.selectorLabels" . | nindent 4 }}
+{{- end }}
