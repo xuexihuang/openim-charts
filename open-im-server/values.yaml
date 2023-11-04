@@ -40,8 +40,6 @@ service:
   type: ClusterIP
   port: 80
 
-monitor:
-  enabled: true
 ingress:
   enabled: false
   className: "nginx"
