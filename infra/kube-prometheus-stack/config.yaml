@@ -1,7 +1,7 @@
 
 alertmanager:
   ingress:
-    enabled: true
+    enabled: false
     ingressClassName: nginx
     annotations: { }
     labels: { }
@@ -18,7 +18,7 @@ grafana:
   enabled: true
   adminPassword: prom-operator
   ingress:
-    enabled: true
+    enabled: false
     ingressClassName: nginx
     annotations: {}
     labels: {}
@@ -34,7 +34,7 @@ grafana:
 prometheus:
   enabled: true
   ingress:
-    enabled: true
+    enabled: false
     ingressClassName: nginx
     annotations: {}
     labels: {}
