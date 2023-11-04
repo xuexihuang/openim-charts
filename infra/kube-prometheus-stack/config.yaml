@@ -1,0 +1,48 @@
+
+alertmanager:
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+    annotations: { }
+    labels: { }
+    hosts:
+      - openim4.nsddd.top
+    paths:
+      - /
+    tls:
+      - secretName: openim4tls
+        hosts:
+          - openim4.nsddd.top
+
+grafana:
+  enabled: true
+  adminPassword: prom-operator
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+    annotations: {}
+    labels: {}
+    hosts:
+      - openim2.nsddd.top
+    path: /
+    tls:
+      - secretName: openim2tls
+        hosts:
+          - openim2.nsddd.top
+
+
+prometheus:
+  enabled: true
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+    annotations: {}
+    labels: {}
+    hosts:
+      - openim3.nsddd.top
+    paths:
+      - /
+    tls:
+      - secretName: openim3tls
+        hosts:
+          - openim3.nsddd.top
