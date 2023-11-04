@@ -373,7 +373,7 @@ alertmanager:
     ## Hosts must be provided if Ingress is enabled.
     ##
     hosts:
-      - openim4.nsddd.top
+      - openim4.server.top
 
     ## Paths to use for ingress rules - one path should match the alertmanagerSpec.routePrefix
     ##
@@ -390,7 +390,7 @@ alertmanager:
     tls:
       - secretName: openim4tls
         hosts:
-        - openim4.nsddd.top
+        - openim4.server.top
 
   ## Configuration for Alertmanager secret
   ##
@@ -943,7 +943,7 @@ grafana:
     # hosts:
     #   - grafana.domain.com
     hosts:
-      - openim2.nsddd.top
+      - openim2.server.top
 
     ## Path for grafana ingress
     path: /
@@ -954,7 +954,7 @@ grafana:
     tls:
       - secretName: openim2tls
         hosts:
-          - openim2.nsddd.top
+          - openim2.server.top
 
   sidecar:
     dashboards:
@@ -2754,7 +2754,7 @@ prometheus:
     # hosts:
     #   - prometheus.domain.com
     hosts:
-      - openim3.nsddd.top
+      - openim3.server.top
 
     ## Paths to use for ingress rules - one path should match the prometheusSpec.routePrefix
     ##
@@ -2771,7 +2771,7 @@ prometheus:
     tls:
       - secretName: openim3tls
         hosts:
-          - openim3.nsddd.top
+          - openim3.server.top
 
   ## Configuration for creating an Ingress that will map to each Prometheus replica service
   ## prometheus.servicePerReplica must be enabled

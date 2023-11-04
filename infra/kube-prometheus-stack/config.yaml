@@ -6,13 +6,13 @@ alertmanager:
     annotations: { }
     labels: { }
     hosts:
-      - openim4.nsddd.top
+      - openim4.server.top
     paths:
       - /
     tls:
       - secretName: openim4tls
         hosts:
-          - openim4.nsddd.top
+          - openim4.server.top
 
 grafana:
   enabled: true
@@ -23,12 +23,12 @@ grafana:
     annotations: {}
     labels: {}
     hosts:
-      - openim2.nsddd.top
+      - openim2.server.top
     path: /
     tls:
       - secretName: openim2tls
         hosts:
-          - openim2.nsddd.top
+          - openim2.server.top
 
 
 prometheus:
@@ -39,10 +39,10 @@ prometheus:
     annotations: {}
     labels: {}
     hosts:
-      - openim3.nsddd.top
+      - openim3.server.top
     paths:
       - /
     tls:
       - secretName: openim3tls
         hosts:
-          - openim3.nsddd.top
+          - openim3.server.top

@@ -25,7 +25,7 @@ ingress:
 apiIngress:
   enabled: true
   ingressClassName: "nginx"
-  hostname: openim1.nsddd.top # your hostname
+  hostname: openim1.server.top # your hostname
   annotations:
     nginx.ingress.kubernetes.io/proxy-body-size: 50m
     nginx.ingress.kubernetes.io/use-regex: "true"
@@ -35,5 +35,5 @@ apiIngress:
   servicePort: minio-api
   extraTls:
     - hosts:
-        - openim1.nsddd.top
+        - openim1.server.top
       secretName: webapitls  #your hostname tls

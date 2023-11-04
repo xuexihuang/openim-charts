@@ -108,14 +108,14 @@ config:
   # minio.signEndpoint is minio public network address
   object:
     enable: "minio"
-    apiURL: "https://openim1.nsddd.top/api"
+    apiURL: "https://openim1.server.top/api"
     minio:
       bucket: "openim"
       endpoint: "http://im-minio:9000"
       accessKeyID: "root"
       secretAccessKey: "openIM123"
       sessionToken: ''
-      signEndpoint: "https://openim1.nsddd.top/im-minio-api"
+      signEndpoint: "https://openim1.server.top/im-minio-api"
     cos:
       bucketURL: https://temp-1252357374.cos.ap-chengdu.myqcloud.com
       secretID: ''
@@ -351,7 +351,7 @@ config:
   # The number of ports needs to be consistent with msg_transfer_service_num in script/path_info.sh
   prometheus:
     enable: true
-    prometheusUrl: "https://openim2.nsddd.top/"
+    prometheusUrl: "https://openim2.server.top/"
     apiPrometheusPort: [ 90 ]
     userPrometheusPort: [ 90 ]
     friendPrometheusPort: [ 90 ]

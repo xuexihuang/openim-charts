@@ -16,14 +16,14 @@ ingress:
     nginx.ingress.kubernetes.io/use-regex: "true"
     nginx.ingress.kubernetes.io/rewrite-target: /$2
   hosts:
-    - host: openim1.nsddd.top # your hostname
+    - host: openim1.server.top # your hostname
       paths:
         - path: /api(/|$)(.*)
           pathType: ImplementationSpecific
   tls:
     - secretName: webapitls  #your hostname tls
       hosts:
-        - openim1.nsddd.top
+        - openim1.server.top
 
 
 openim-msggateway:
@@ -38,14 +38,14 @@ openim-msggateway:
       nginx.ingress.kubernetes.io/use-regex: "true"
       nginx.ingress.kubernetes.io/rewrite-target: /$2
     hosts:
-      - host: openim1.nsddd.top # your hostname
+      - host: openim1.server.top # your hostname
         paths:
           - path: /msg_gateway(/|$)(.*)
             pathType: ImplementationSpecific
     tls:
       - secretName: webapitls  #your hostname tls
         hosts:
-          - openim1.nsddd.top
+          - openim1.server.top
 
 
 
