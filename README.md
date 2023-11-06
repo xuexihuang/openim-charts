@@ -23,7 +23,7 @@ helm install im-kube-prometheus-stack infra/kube-prometheus-stack/ -f prometheus
 helm install openimserver -f k8s-open-im-server-config.yaml -f config-imserver.yaml -f notification.yaml ./open-im-server/
 说明：要在文件k8s-open-im-server-config.yaml配置域名信息，请修改成你真实的域名和tls名称。config-imserver.yaml中账户信息默认和中间件的*-config.yaml是同步的，
 如果前面安装了中间件时候修改了*-config.yaml请同步修改config-imserver.yaml
-说明：如果你想开启监控功能请修改k8s-open-im-server-config.yaml文件中global.monitor.enabled的为true，请修改config-imserver.yaml文件中的prometheus.enable为true
+说明：如果你想开启监控功能请修改k8s-open-im-server-config.yaml文件中global.monitor.enabled的为true，请修改config-imserver.yaml文件中的prometheus.enable为true,prometheusUrl为真实的Prometheus访问的url
 # 安装openimchat服务
 helm install openimchat -f k8s-chat-server-config.yaml -f config-chatserver.yaml ./chat-server/
 说明：要在文件k8s-chat-server-config.yaml配置域名信息，请修改成你真实的域名和tls名称。config-chatserver.yaml中账户信息默认和中间件的*-config.yaml是同步的，

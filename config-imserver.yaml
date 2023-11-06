@@ -350,7 +350,7 @@ config:
   # The number of Prometheus ports per service needs to correspond to rpcPort
   # The number of ports needs to be consistent with msg_transfer_service_num in script/path_info.sh
   prometheus:
-    enable: true
+    enable: false
     prometheusUrl: "https://openim2.server.top/"
     apiPrometheusPort: [ 90 ]
     userPrometheusPort: [ 90 ]
