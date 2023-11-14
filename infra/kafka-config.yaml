@@ -36,3 +36,10 @@ provisioning:
       config:
         max.message.bytes: 64000
         flush.messages: 1
+metrics:
+  kafka:
+    enabled: false
+  serviceMonitor:
+    enabled: false
+    labels:
+      release: kube-prometheus-stack

@@ -15,6 +15,16 @@ helm install im-redis infra/redis/ -f redis-config.yaml
 请不要修改chart名称:im-mysql,im-kafka,im-minio,im-mongodb,im-redis，否则要同步中间件的serviceName信息到config-imserver.yaml和config-chatserver.yaml。
 请不要修改五个配置文件的账户信息，否则要同步中间件的账户信息到config-imserver.yaml和config-chatserver.yaml中。
 
+说明：如果要开启中间件的exporter，请设置三个文件中的metrics:[]区域和serviceMonitor:[]区域的enable=true.
+比如:kafka-config.yaml
+metrics:
+  kafka:
+  enabled: true
+  serviceMonitor:
+    enabled: true
+    labels:
+      release: kube-prometheus-stack
+
 # 安装监控中间件
 如果你需要开启监控功能请安装kube-prometheus-stack组件
 helm install im-kube-prometheus-stack infra/kube-prometheus-stack/ -f prometheus-config.yaml

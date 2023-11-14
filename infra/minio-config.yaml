@@ -37,3 +37,9 @@ apiIngress:
     - hosts:
         - openim1.server.top
       secretName: webapitls  #your hostname tls
+
+metrics:
+  serviceMonitor:
+    enabled: false
+    labels:
+      release: kube-prometheus-stack
