@@ -164,6 +164,7 @@ defaultRules:
 
 ## Provide custom recording or alerting rules to be deployed into the cluster.
 ##
+
 additionalPrometheusRulesMap: {}
 #  rule-name:
 #    groups:
@@ -269,6 +270,7 @@ alertmanager:
   ## ref: https://prometheus.io/docs/alerting/configuration/#configuration-file
   ##      https://prometheus.io/webtools/alerting/routing-tree-editor/
   ##
+
   config:
     global:
       resolve_timeout: 5m
